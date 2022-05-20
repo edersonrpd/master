@@ -2,23 +2,11 @@ import os
 
 arquivos = os.listdir()
 
-excecao = ['masterformula.py', '.git', '.gitignore', 'resultados.txt', 'pedidos' ]
+excecao = ['masterformula.py', '.git', '.gitignore', 'resultados.txt', 'pedidos', 'master.bat' ]
 
 for exc in excecao:
     if exc in excecao:
         arquivos.remove(exc)
-
-# if 'masterformula.py' in arquivos:
-#     arquivos.remove('masterformula.py')
-
-# if '.git' in arquivos:
-#     arquivos.remove('.git')
-
-# if '.gitignore' in arquivos:
-#     arquivos.remove('.gitignore')
-
-# if 'resultados.txt' in arquivos:
-#     arquivos.remove('resultados.txt')
 
 
 def master_formula(file: str):
@@ -43,7 +31,7 @@ def master_formula(file: str):
                 cnpj = linha[8:22]
                 cod_cli = linha[23:31]
                 pedido = linha[31:40]
-                data = linha[42:49]
+                data = linha[42:48]
 
             if linha.startswith('09'):
                 qtde_itens = int(linha[3:6])
