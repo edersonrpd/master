@@ -60,4 +60,9 @@ def master_formula(file: str):
 for arquivo in arquivos:
     master_formula(arquivo)
 
-print(f'{len(arquivos)} arquivos')
+print('-' * 48)
+
+if len(arquivos) == 1:
+    print(f'{len(arquivos)} arquivo.')
+else:
+    print(f'{len(arquivos)} arquivos.')
