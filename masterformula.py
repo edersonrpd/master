@@ -4,11 +4,11 @@ diretorio = os.listdir()
 arquivos = list()
 
 for arquivo in diretorio:
-  if arquivo.endswith('.ped'):
-    arquivos.append(arquivo)
+    if arquivo.endswith('.ped'):
+        arquivos.append(arquivo)
 
 
-def master_formula(file: str):
+def master_formula(file: str) -> str:
     produtos = []
     pedido = ''
     identificador = ''
@@ -46,15 +46,14 @@ def master_formula(file: str):
         print('-' * 48)
         print(f'|Pedido {pedido}  Arquivo: {file}     |')
         print('-' * 48)
-        print(f'Identificador = {identificador} Layout = {layout}')
-        print(f'Cod. Cliente = {cod_cli} CNPJ = {cnpj}')
-        print(f'Data = {dia}/{mes}/{ano}')
+        print(f'Identificador: {identificador} Layout : {layout}')
+        print(f'Cod. Cliente: {cod_cli} CNPJ: {cnpj}')
+        print(f'Data:  {dia}/{mes}/{ano}')
         print('')
         for produto in produtos:
-            print(f'EAN = {produto}')
-        print(f'Qtde itens = {qtde_itens} | Qtde Tot. UN = {qtde_total_unid}')
+            print(f'EAN: {produto}')
+        print(f'Qtde itens: {qtde_itens} | Qtde Tot. UN: {qtde_total_unid}')
         print(f'')
-        # return pedido, identificador, layout, cnpj, cod_cli, pedido, data, produtos, qtde_itens,qtde_total_unid
 
 
 for arquivo in arquivos:
