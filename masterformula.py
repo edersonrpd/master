@@ -10,17 +10,7 @@ for arquivo in diretorio:
 
 def master_formula(file: str) -> str:
     produtos = []
-    pedido = ''
-    identificador = ''
-    layout = ''
-    cnpj = ''
-    data = ''
-    dia = ''
-    mes = ''
-    ano = ''
-    qtde_itens = ''
-    qtde_total_unid = ''
-    cod_cli = ''
+
     with open(file, mode='r', encoding='utf-8') as arquivo:
         linha = arquivo.readline()
         while linha:
