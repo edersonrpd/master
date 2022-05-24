@@ -24,8 +24,6 @@ def master_formula(file: str) -> str:
     with open(file, mode='r', encoding='utf-8') as arquivo:
         linha = arquivo.readline()
         while linha:
-            if linha.startswith('03'):
-                produtos.append(linha[3:16])
 
             if linha.startswith('01'):
                 identificador = linha[:2]
@@ -37,6 +35,10 @@ def master_formula(file: str) -> str:
                 dia = data[6:8]
                 mes = data[4:6]
                 ano = data[:4]
+
+            if linha.startswith('03'):
+                produtos.append(linha[3:16])
+
             if linha.startswith('09'):
                 qtde_itens = int(linha[3:6])
                 qtde_total_unid = int(linha[7:15])
